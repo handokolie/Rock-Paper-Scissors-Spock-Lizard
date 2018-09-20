@@ -2,8 +2,8 @@
 import random
 from termcolor import colored
 
-"""This program plays a game of Rock, Paper, Scissors between two Players,
-and reports both Player's scores each round."""
+"""This program plays an expanded version of the game Rock, Paper, Scissors
+between two Players, and reports both Player's scores each round."""
 
 moves = ['rock', 'paper', 'scissors', 'spock', 'lizard']
 
