@@ -20,6 +20,9 @@ class Player:
 
 
 class HumanPlayer(Player):
+    def __init__(self):
+        super().__init__()
+
     def move(self):
         human_move = input("rock, paper, scissors, spock, lizard? ")
         while human_move not in moves:
