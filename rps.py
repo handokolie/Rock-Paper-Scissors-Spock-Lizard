@@ -102,9 +102,15 @@ class Game:
 
     def multiple_rounds(self):
         self.more_rounds = input("How many rounds do you want to play? ")
-        while self.more_rounds == "1":
-            self.more_rounds = input("It should be more than one round.\n\
-How many rounds do you want to play? ")
+        while True:
+            try:
+                while int(self.more_rounds) <= 1:
+                    self.more_rounds = input("Please enter a number \
+greater than 1: ")
+                if int(self.more_rounds) > 1:
+                    break
+            except ValueError:
+                self.more_rounds = input("Please enter integer value only: ")
         print(f"Okay, we will play {self.more_rounds} rounds.")
 
     def play_round(self):
